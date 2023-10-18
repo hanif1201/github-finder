@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const UsersItem = ({ user: { login, avatar_url } }) => {
   return (
@@ -13,6 +14,12 @@ const UsersItem = ({ user: { login, avatar_url } }) => {
         </div>
         <div>
           <h2 className="card-title">{login}</h2>
+          <Link
+            className="text-base-content text-opacity-40"
+            to={`/user/${login}`}
+          >
+            Visit Profile
+          </Link>
         </div>
       </div>
     </div>
